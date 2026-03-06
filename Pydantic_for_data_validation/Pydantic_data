@@ -1,0 +1,39 @@
+from pydantic import BaseModel, EmailStr, Field, field_validator
+
+class UserRegister(BaseModel):
+    username : str = Field(min_length=5)
+    email : EmailStr = Field(description = "Provide a valid email")
+    age : int 
+
+    @field_validator('age')
+    @ classmethod
+    def validate_age(cls,value):
+        if value <18:
+            raise ValueError("Invalid age provided")
+        return value
+    
+    @field_validator('email')
+    @ classmethod
+    def email_validator(cls,value):
+        domain_name = value.split("@")[-1]
+        if domain_name != "gmail.com":
+            raise ValueError("Not a valid email")
+        return value
+    
+user_info1 ={"username":"Kanika","email":"kanikamalik44@gmail.com","age": 32}
+user1 = UserRegister(**user_info1)
+print(user1.username)
+print(user1.email)
+print(user1.age)
+print("---------------------------------------")
+user_info2 ={"username":"Kanika","email":"kanikamalik44@gmail.com","age": 15}
+user2 = UserRegister(**user_info2)
+print(user2.username)
+print(user2.email)
+print(user2.age)
+print("---------------------------------------")
+user_info3 ={"username":"Kanika","email":"kanikamalik44@gmil.com","age": 35}
+user3 = UserRegister(**user_info2)
+print(user3.username)
+print(user3.email)
+print(user3.age)
