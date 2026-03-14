@@ -26,13 +26,13 @@ print(user1.username)
 print(user1.email)
 print(user1.age)
 print("---------------------------------------")
-user_info2 ={"username":"Kanika","email":"kanikamalik44@gmail.com","age": 15}
+user_info2 ={"username":"Anika","email":"anikamalik44@gmail.com","age": 15}
 user2 = UserRegister(**user_info2)
 print(user2.username)
 print(user2.email)
 print(user2.age)
 print("---------------------------------------")
-user_info3 ={"username":"Kanika","email":"kanikamalik44@gmil.com","age": 35}
+user_info3 ={"username":"Nika","email":"nikamalik44@gmil.com","age": 35}
 user3 = UserRegister(**user_info2)
 print(user3.username)
 print(user3.email)
