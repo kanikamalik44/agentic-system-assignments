@@ -1,0 +1,7 @@
+LangChain:-This framework is for building LLM applications and simple tools. It is open source and fast to implement. It is good choice for simple workflow.
+LangGraph:- This framework is for multi-step and complex workflow. it takes autonomous actions and run some tasks for long time.
+Crew AI:- This framework used to build agentic applications around multiple agents together like a team.
+Google ADK:- Modular framework for developing AI agents and best for companies who are already on Google ecosystem.
+Versal AI SDK:- SDK is software development kit tool for building AI agent app.
+Autogen:- Autogen is a framework for building multi agent AI applications where agents can collabrate autonomously or with humans.
+n8n:- No code and low code is prefrable in this framework. It is automate workflow, business workflow, approval workflow.
